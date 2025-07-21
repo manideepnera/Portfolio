@@ -63,7 +63,7 @@ export default function Home() {
           Contact
         </button>
       </nav>
-      
+
       {/* Hero Section */}
       <Hero homeRef={homeRef} contactbtnRef={contactbtnRef} scrollToContact={scrollToContact} />
       <AboutSection ref={aboutRef} />
@@ -72,7 +72,7 @@ export default function Home() {
       <ProjectsSection ref={projectsRef} />
       <AchievementsSection ref={achievementsRef} />
       <ResumeSection ref={resumeRef} />
-      <BlogSection ref={blogRef} />
+      {/* <BlogSection ref={blogRef} /> */}
       <EducationSection ref={educationRef} />
       <ContactSection ref={contactRef} />
 
