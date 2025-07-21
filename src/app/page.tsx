@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+import React from 'react';
 import { useRef } from 'react';
 import AboutSection from "./sections/AboutSection";
 import TimelineSection from "./sections/TimelineSection";
@@ -63,6 +63,7 @@ export default function Home() {
           Contact
         </button>
       </nav>
+      
       {/* Hero Section */}
       <Hero homeRef={homeRef} contactbtnRef={contactbtnRef} scrollToContact={scrollToContact} />
       <AboutSection ref={aboutRef} />

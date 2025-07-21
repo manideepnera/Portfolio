@@ -13,7 +13,7 @@ const AboutSection = React.forwardRef<HTMLDivElement>((props, ref) => (
       {/* Image Section */}
       <div className="w-full md:w-1/3 relative h-64 md:h-80">
         <Image
-          src="/about.jpg" // Replace with your image path
+          src="/about.jpg"
           alt="About Me"
           fill
           className="object-cover rounded-2xl shadow-lg"

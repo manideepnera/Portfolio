@@ -25,7 +25,7 @@ export default function HeroSection({ homeRef, contactbtnRef, scrollToContact }:
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight"
         >
-          Hello World <br /> Dream it. Build it. Scale it.
+          <span className="text-[#C0C0C0]">Hello World!</span> <br /> Dream it. Build it. Scale it.
         </motion.h1>
 
         <motion.p
