@@ -23,7 +23,7 @@ export default function HeroSection({ homeRef, contactbtnRef, scrollToContact }:
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-white text-4xl sm:text-5xl font-bold leading-tight tracking-tight"
+          className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight"
         >
           Product Designer <br /> based in Nepal.
         </motion.h1>
