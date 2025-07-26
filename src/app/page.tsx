@@ -11,6 +11,7 @@ import BlogSection from "./sections/BlogSection";
 import EducationSection from "./sections/EducationSection";
 import ContactSection from "./sections/ContactSection";
 import Hero from "./sections/Hero";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   const aboutRef = useRef<HTMLDivElement | null>(null);
@@ -39,31 +40,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-black text-white">
-      {/* Navbar */}
-      <nav className="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-white/10 px-6 py-4 flex justify-between items-center">
-        <div className="text-white font-semibold text-lg cursor-pointer" onClick={() => scrollToSection(homeRef)}>
-          Manideep Nera
-        </div>
-        <ul className="hidden lg:flex gap-6 text-sm text-white/70">
-          {([
-            ['About', aboutRef],
-            ['Timeline', timelineRef],
-            ['Skills', skillsRef],
-            ['Projects', projectsRef],
-            ['Achievements', achievementsRef],
-            ['Resume', resumeRef],
-            ['Blog', blogRef],
-            ['Education', educationRef],
-            ['Contact', contactRef]
-          ] as [string, React.RefObject<HTMLDivElement | null>][]).map(([label, ref]) => (
-            <li key={label} className="hover:text-white cursor-pointer" onClick={() => scrollToSection(ref)}>{label}</li>
-          ))}
-        </ul>
-        <button ref={contactbtnRef} onClick={scrollToContact} className="text-sm border border-white/20 rounded-md px-4 py-1.5 hover:bg-white hover:text-black transition">
-          Contact
-        </button>
-      </nav>
-
+      
       {/* Hero Section */}
       <Hero homeRef={homeRef} contactbtnRef={contactbtnRef} scrollToContact={scrollToContact} />
       <AboutSection ref={aboutRef} />
