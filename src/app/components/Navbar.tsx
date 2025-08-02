@@ -14,7 +14,7 @@ type NavbarProps = {
   blogRef: React.RefObject<HTMLDivElement | null>;
   educationRef: React.RefObject<HTMLDivElement | null>;
   contactRef: React.RefObject<HTMLDivElement | null>;
-  contactbtnRef: React.RefObject<HTMLButtonElement>;
+  contactbtnRef: React.RefObject<HTMLButtonElement | null>;
 };
 
 const Navbar: React.FC<NavbarProps> = ({

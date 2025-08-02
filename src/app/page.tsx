@@ -13,6 +13,7 @@ import ContactSection from "./sections/ContactSection";
 import Hero from "./sections/Hero";
 import Navbar from "./components/Navbar";
 
+
 export default function Home() {
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const homeRef = useRef<HTMLDivElement | null>(null);
@@ -40,7 +41,23 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-black text-white">
-      
+      <Navbar
+  scrollToSection={scrollToSection}
+  scrollToContact={scrollToContact}
+  homeRef={homeRef}
+  aboutRef={aboutRef}
+  timelineRef={timelineRef}
+  skillsRef={skillsRef}
+  projectsRef={projectsRef}
+  achievementsRef={achievementsRef}
+  resumeRef={resumeRef}
+  blogRef={blogRef}
+  educationRef={educationRef}
+  contactRef={contactRef}
+  contactbtnRef={contactbtnRef}
+/>
+
+
       {/* Hero Section */}
       <Hero homeRef={homeRef} contactbtnRef={contactbtnRef} scrollToContact={scrollToContact} />
       <AboutSection ref={aboutRef} />
