@@ -1,7 +1,3 @@
-Here’s a **personalized, minimal README** for your portfolio repo so it feels like *your* page, not a Next.js template:
-
----
-
 # 💼 Manideep Nera – Portfolio
 
 Welcome to my personal portfolio website!
@@ -18,19 +14,11 @@ Built with **Next.js** for speed, responsiveness, and modern design.
 ## 🛠 Tech Stack
 
 * **Framework:** [Next.js](https://nextjs.org)
-* **Styling:** Tailwind CSS / Custom CSS
+* **Styling:** Tailwind CSS
 * **Deployment:** [Vercel](https://vercel.com)
 
-## 📦 Running Locally
-
-Clone the repo and run:
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+📦 Live Portfolio
+View the live portfolio here: https://manideep-nera.vercel.app/ (Vercel Deployment)
 
 ## 📬 Connect With Me
 
