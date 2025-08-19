@@ -42,20 +42,20 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-black text-white">
       <Navbar
-  scrollToSection={scrollToSection}
-  scrollToContact={scrollToContact}
-  homeRef={homeRef}
-  aboutRef={aboutRef}
-  timelineRef={timelineRef}
-  skillsRef={skillsRef}
-  projectsRef={projectsRef}
-  achievementsRef={achievementsRef}
-  resumeRef={resumeRef}
-  blogRef={blogRef}
-  educationRef={educationRef}
-  contactRef={contactRef}
-  contactbtnRef={contactbtnRef}
-/>
+        scrollToSection={scrollToSection}
+        scrollToContact={scrollToContact}
+        homeRef={homeRef}
+        aboutRef={aboutRef}
+        timelineRef={timelineRef}
+        skillsRef={skillsRef}
+        projectsRef={projectsRef}
+        achievementsRef={achievementsRef}
+        resumeRef={resumeRef}
+        blogRef={blogRef}
+        educationRef={educationRef}
+        contactRef={contactRef}
+        contactbtnRef={contactbtnRef}
+      />
 
 
       {/* Hero Section */}

@@ -59,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({
           className="text-white font-semibold text-lg cursor-pointer"
           onClick={() => scrollToSection(homeRef)}
         >
-          Charan Sai
+          Manideep Nera
         </div>
 
         {/* Desktop Nav */}
