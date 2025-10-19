@@ -2,25 +2,25 @@ import React from "react";
 
 const timelineEvents = [
   {
-    year: "2020",
-    title: "Started B.Tech in Computer Science",
-    description: "Began my academic journey with a focus on software engineering and development.",
-  },
-  {
     year: "2022",
-    title: "Internship at XYZ Tech",
-    description: "Worked as a frontend developer intern, contributing to a live project using React.",
+    title: "Started B.Tech in Computer Science Engineering (AI & ML) at Ace Engineering College",
+    description: "Began my academic journey with a focus on software engineering and development, gaining foundational knowledge in programming and algorithms.",
   },
-  {
-    year: "2023",
-    title: "Open Source Contributions",
-    description: "Contributed to open-source repositories, collaborating with global developers.",
-  },
-  {
-    year: "2024",
-    title: "Capstone Project",
-    description: "Led a team to develop a full-stack web application solving real-world logistics problems.",
-  },
+  // {
+  //   year: "2023",
+  //   title: "",
+  //   description: "Worked as a frontend developer intern, contributing to a live project using React.",
+  // },
+  // {
+  //   year: "2023",
+  //   title: "Open Source Contributions",
+  //   description: "Contributed to open-source repositories, collaborating with global developers.",
+  // },
+  // {
+  //   year: "2024",
+  //   title: "Capstone Project",
+  //   description: "Led a team to develop a full-stack web application solving real-world logistics problems.",
+  // },
 ];
 
 const TimelineSection = React.forwardRef<HTMLDivElement>((props, ref) => (

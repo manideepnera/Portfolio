@@ -2,13 +2,13 @@ import React from "react";
 import Image from "next/image";
 
 const skills = [
-  { name: "Python", icon: "/skills/python.png", percentage: 90 },
-  { name: "React", icon: "/skills/react.png", percentage: 85 },
-  { name: "JavaScript", icon: "/skills/js.png", percentage: 80 },
+  { name: "Python", icon: "/skills/python.png", percentage: 10 },
+  // { name: "React", icon: "/skills/react.png", percentage: 85 },
+  // { name: "JavaScript", icon: "/skills/js.png", percentage: 80 },
   // { name: "TypeScript", icon: "/skills/typescript.png", percentage: 70 },
-  { name: "HTML & CSS", icon: "/skills/html.png", percentage: 88 },
-  { name: "Figma", icon: "/skills/figma.png", percentage: 75 },
-  { name: "Git", icon: "/skills/github.png", percentage: 70 },
+  { name: "HTML & CSS", icon: "/skills/html.png", percentage: 60 },
+  { name: "Figma", icon: "/skills/figma.png", percentage: 80 },
+  { name: "Git", icon: "/skills/github.png", percentage: 40 },
 ];
 
 const SkillsSection = React.forwardRef<HTMLDivElement>((props, ref) => (

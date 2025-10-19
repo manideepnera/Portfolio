@@ -17,7 +17,7 @@ const ContactSection = React.forwardRef<HTMLDivElement>((props, ref) => (
         <div className="space-y-4">
           <div className="flex items-center gap-4">
             <Image src="/icons/email.svg" alt="Email" width={24} height={24} />
-            <span className="text-white">maxyforfuture@gmail.com</span>
+            <span className="text-white">manideepnera@gmail.com</span>
           </div>
           <div className="flex items-center gap-4">
             <Image src="/icons/location.svg" alt="Location" width={24} height={24} />
@@ -31,21 +31,21 @@ const ContactSection = React.forwardRef<HTMLDivElement>((props, ref) => (
         <h3 className="text-2xl font-semibold text-white mb-2">Connect with me</h3>
         <div className="flex gap-6 items-center">
           <a
-            href="https://www.linkedin.com/in/manideep-nera/"
+            href="https://www.linkedin.com/in/manideepnera/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image src="/icons/linkedin.svg" alt="LinkedIn" width={28} height={28} />
           </a>
           <a
-            href="https://github.com/TheMaxy4"
+            href="https://github.com/manideepnera/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image src="/icons/github.svg" alt="GitHub" width={28} height={28} />
           </a>
           <a
-            href="https://instagram.com/themaxy_"
+            href="https://instagram.com/manideepnera/"
             target="_blank"
             rel="noopener noreferrer"
           >

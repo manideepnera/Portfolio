@@ -43,7 +43,6 @@ const Navbar: React.FC<NavbarProps> = ({
     ['Resume', resumeRef],
     ['Blog', blogRef],
     ['Education', educationRef],
-    ['Contact', contactRef],
   ];
 
   const handleNavClick = (ref: React.RefObject<HTMLDivElement | null>) => {

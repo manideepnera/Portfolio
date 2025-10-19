@@ -14,25 +14,7 @@ const projects = [
     link: "https://themaxy4.github.io/Crop_Yield_Prediction/",
     year: "2024",
     technologies: ["Python", "TensorFlow", "Pandas"],
-  },
-  {
-    title: "Maxy Website",
-    description:
-      "The official website for Maxy — initially built using WordPress and now transitioning to a full-stack MERN architecture for better performance, customization, and scalability.",
-    image: "/projects/maxy-site.png",
-    link: "https://maxy.example.com",
-    year: "2023",
-    technologies: ["WordPress", "MERN Stack (Planned)"],
-  },
-  {
-    title: "Share Space",
-    description:
-      "A creative digital hub within Maxy featuring questions, polls, and engagement spaces divided into Keeropedia and Thrillopia. Designed to encourage participation and creativity.",
-    image: "/projects/share-space.png",
-    link: "#",
-    year: "2025",
-    technologies: ["Next.js", "Firebase", "TailwindCSS"],
-  },
+  }
 ];
 
 const ProjectsSection = React.forwardRef<HTMLDivElement>((_, ref) => {
