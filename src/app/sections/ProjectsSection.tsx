@@ -11,9 +11,9 @@ const projects = [
     description:
       "A machine learning project that predicts crop yields based on various parameters. Built with Python and TensorFlow. It includes data visualization, preprocessing pipelines, and yield forecasting features.",
     image: "/projects/crop_yield_prediction.png",
-    link: "https://themaxy4.github.io/Crop_Yield_Prediction/",
+    link: "https://manideepnera.github.io/Crop_Yield_Prediction/",
     year: "2024",
-    technologies: ["Python", "TensorFlow", "Pandas"],
+    technologies: ["Python", "Data Visualization"]
   }
 ];
 
