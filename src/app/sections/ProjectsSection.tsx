@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { title } from "process";
 
 const projects = [
   {
@@ -14,6 +15,15 @@ const projects = [
     link: "https://manideepnera.github.io/Crop_Yield_Prediction/",
     year: "2024",
     technologies: ["Python", "Data Visualization"]
+  },
+  {
+    title: "Sun-Safe Seating Planner",
+    description:
+      "An interactive web application that helps users choose sun-safe seating for outdoor events. Features include a clean and minimalistic UI, responsive design, and dynamic time-based seating suggestions.",
+    image: "/projects/sun_safe_seating_planner.png",
+    link: "https://manideepnera.github.io/Sun-Safe-Seating-Planner/",
+    year: "2025",
+    technologies: ["JavaScript", "CSS", "HTML"]
   }
 ];
 
