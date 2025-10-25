@@ -3,6 +3,7 @@ import Image from "next/image";
 
 const skills = [
   { name: "Python", icon: "/skills/python.png", percentage: 10 },
+  { name: "Java", icon: "/skills/java.png", percentage: 5 },
   // { name: "React", icon: "/skills/react.png", percentage: 85 },
   // { name: "JavaScript", icon: "/skills/js.png", percentage: 80 },
   // { name: "TypeScript", icon: "/skills/typescript.png", percentage: 70 },
