@@ -20,7 +20,7 @@ const projects = [
     title: "Sun-Safe Seating Planner",
     description:
       "An interactive web application that helps users choose sun-safe seating for outdoor events. Features include a clean and minimalistic UI, responsive design, and dynamic time-based seating suggestions.",
-    image: "/projects/sun_safe_seating_planner.png",
+    image: "/projects/sun_safe.png",
     link: "https://manideepnera.github.io/Sun-Safe-Seating-Planner/",
     year: "2025",
     technologies: ["JavaScript", "CSS", "HTML"]
