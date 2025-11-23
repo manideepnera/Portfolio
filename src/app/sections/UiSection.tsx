@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const blogs = [
+const designs = [
   {
-    title: "Portfolio UI Design",
-    description: "A modern portfolio UI concept created in Figma with smooth layout and minimal design.",
+    title: "Chatter UI Design",
+    description: "A sleek and modern chat application UI design focused on user experience and accessibility.",
     year: "2025",
     figmaEmbed: "https://embed.figma.com/proto/uAyJgzyaXwdm4eGEwU2IM4/chat-app?page-id=0%3A1&node-id=16-50&p=f&viewport=54%2C144%2C0.75&scaling=scale-down&content-scaling=fixed&starting-point-node-id=16%3A50&embed-host=share"
   },
@@ -15,15 +15,15 @@ const blogs = [
     title: "Dashboard Concept",
     description: "A startup dashboard UI concept focusing on analytics and clarity.",
     year: "2025",
-    figmaEmbed: "https://www.figma.com/embed?embed_host=share&url=YOUR_FIGMA_LINK_HERE"
+    figmaEmbed: ""
   }
 ];
 
 const BlogSection = React.forwardRef<HTMLDivElement>((_, ref) => {
-  const [activeBlog, setActiveBlog] = useState<typeof blogs[0] | null>(null);
+  const [activeDesign, setActiveDesign] = useState<typeof designs[0] | null>(null);
 
-  const openModal = (blog: typeof blogs[0]) => setActiveBlog(blog);
-  const closeModal = () => setActiveBlog(null);
+  const openModal = (design: typeof designs[0]) => setActiveDesign(design);
+  const closeModal = () => setActiveDesign(null);
 
   return (
     <section
@@ -37,20 +37,20 @@ const BlogSection = React.forwardRef<HTMLDivElement>((_, ref) => {
 
       {/* Blog Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
-        {blogs.map((blog, index) => (
+        {designs.map((design, index) => (
           <div
             key={index}
-            onClick={() => openModal(blog)}
+            onClick={() => openModal(design)}
             className="group border border-white/10 rounded-xl p-5 bg-white/5 hover:bg-white/10 transition duration-200 cursor-pointer"
           >
-            <h3 className="text-lg font-semibold mb-2">{blog.title}</h3>
+            <h3 className="text-lg font-semibold mb-2">{design.title}</h3>
 
             <p className="text-white/60 text-sm leading-relaxed mb-4">
-              {blog.description.slice(0, 90)}...
+              {design.description.slice(0, 90)}...
             </p>
 
             <div className="flex justify-between items-center text-xs text-white/50">
-              <span>{blog.year}</span>
+              <span>{design.year}</span>
               <span className="text-blue-400">Click to view →</span>
             </div>
           </div>
@@ -59,7 +59,7 @@ const BlogSection = React.forwardRef<HTMLDivElement>((_, ref) => {
 
       {/* Modal */}
       <AnimatePresence>
-        {activeBlog && (
+        {activeDesign && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -76,8 +76,8 @@ const BlogSection = React.forwardRef<HTMLDivElement>((_, ref) => {
               {/* Header */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
                 <div>
-                  <h3 className="text-xl font-semibold">{activeBlog.title}</h3>
-                  <p className="text-sm text-white/50">📅 {activeBlog.year}</p>
+                  <h3 className="text-xl font-semibold">{activeDesign.title}</h3>
+                  <p className="text-sm text-white/50">📅 {activeDesign.year}</p>
                 </div>
 
                 <button
@@ -91,13 +91,13 @@ const BlogSection = React.forwardRef<HTMLDivElement>((_, ref) => {
               {/* Content */}
               <div className="p-6 h-full">
                 <p className="text-white/70 mb-5 max-w-3xl">
-                  {activeBlog.description}
+                  {activeDesign.description}
                 </p>
 
                 {/* Figma Embed */}
                 <div className="w-full h-[85%] border border-white/10 rounded-lg overflow-hidden">
                   <iframe
-                    src={activeBlog.figmaEmbed}
+                    src={activeDesign.figmaEmbed}
                     className="w-full h-full"
                     allowFullScreen
                   ></iframe>
