@@ -6,7 +6,6 @@ import TimelineSection from "./sections/TimelineSection";
 import SkillsSection from "./sections/SkillsSection";
 import ProjectsSection from "./sections/ProjectsSection";
 import AchievementsSection from "./sections/AchievementsSection";
-import ResumeSection from "./sections/ResumeSection";
 import BlogSection from "./sections/BlogSection";
 import EducationSection from "./sections/EducationSection";
 import ContactSection from "./sections/ContactSection";
@@ -20,7 +19,6 @@ export default function Home() {
   const homeRef = useRef<HTMLDivElement | null>(null);
   const timelineRef = useRef<HTMLDivElement | null>(null);
   const achievementsRef = useRef<HTMLDivElement | null>(null);
-  const resumeRef = useRef<HTMLDivElement | null>(null);
   const blogRef = useRef<HTMLDivElement | null>(null);
   const educationRef = useRef<HTMLDivElement | null>(null);
   const contactRef = useRef<HTMLDivElement | null>(null);
@@ -53,7 +51,6 @@ export default function Home() {
         projectsRef={projectsRef}
         uidesignRef={uidesignRef}
         achievementsRef={achievementsRef}
-        resumeRef={resumeRef}
         blogRef={blogRef}
         educationRef={educationRef}
         contactRef={contactRef}
@@ -69,7 +66,6 @@ export default function Home() {
       <ProjectsSection ref={projectsRef} />
       <UiSection ref={uidesignRef} />
       <AchievementsSection ref={achievementsRef} />
-      <ResumeSection ref={resumeRef} />
       {/* <BlogSection ref={blogRef} /> */}
       <EducationSection ref={educationRef} />
       <ContactSection ref={contactRef} />
