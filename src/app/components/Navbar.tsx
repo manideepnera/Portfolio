@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({
     ["Projects", projectsRef],
     ["UI Designs", uidesignRef],
     ["Achievements", achievementsRef],
-    ["Blog", blogRef],
+    // ["Blog", blogRef],
     ["Education", educationRef],
   ];
 
