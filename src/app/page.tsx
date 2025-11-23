@@ -12,6 +12,7 @@ import EducationSection from "./sections/EducationSection";
 import ContactSection from "./sections/ContactSection";
 import Hero from "./sections/Hero";
 import Navbar from "./components/Navbar";
+import UiSection from './sections/UiSection';
 
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
   const educationRef = useRef<HTMLDivElement | null>(null);
   const contactRef = useRef<HTMLDivElement | null>(null);
   const projectsRef = useRef<HTMLDivElement | null>(null);
+  const uidesignRef = useRef<HTMLDivElement | null>(null);
   const skillsRef = useRef<HTMLDivElement | null>(null);
   const contactbtnRef = useRef<HTMLButtonElement>(null);
 
@@ -49,6 +51,7 @@ export default function Home() {
         timelineRef={timelineRef}
         skillsRef={skillsRef}
         projectsRef={projectsRef}
+        uidesignRef={uidesignRef}
         achievementsRef={achievementsRef}
         resumeRef={resumeRef}
         blogRef={blogRef}
@@ -64,6 +67,7 @@ export default function Home() {
       <TimelineSection ref={timelineRef} />
       <SkillsSection ref={skillsRef} />
       <ProjectsSection ref={projectsRef} />
+      <UiSection ref={uidesignRef} />
       <AchievementsSection ref={achievementsRef} />
       <ResumeSection ref={resumeRef} />
       {/* <BlogSection ref={blogRef} /> */}

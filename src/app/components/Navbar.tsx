@@ -9,6 +9,7 @@ type NavbarProps = {
   timelineRef: React.RefObject<HTMLDivElement | null>;
   skillsRef: React.RefObject<HTMLDivElement | null>;
   projectsRef: React.RefObject<HTMLDivElement | null>;
+  uidesignRef: React.RefObject<HTMLDivElement | null>;
   achievementsRef: React.RefObject<HTMLDivElement | null>;
   resumeRef: React.RefObject<HTMLDivElement | null>;
   blogRef: React.RefObject<HTMLDivElement | null>;
