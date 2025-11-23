@@ -19,7 +19,7 @@ const designs = [
   }
 ];
 
-const BlogSection = React.forwardRef<HTMLDivElement>((_, ref) => {
+const UiSection = React.forwardRef<HTMLDivElement>((_, ref) => {
   const [activeDesign, setActiveDesign] = useState<typeof designs[0] | null>(null);
 
   const openModal = (design: typeof designs[0]) => setActiveDesign(design);
@@ -31,11 +31,11 @@ const BlogSection = React.forwardRef<HTMLDivElement>((_, ref) => {
       aria-labelledby="blog-heading"
       className="py-24 px-6 sm:px-12 border-t border-white/10 bg-[#0a0a0a] text-white"
     >
-      <h2 id="blog-heading" className="text-3xl sm:text-4xl font-bold mb-12">
-        Blog
+      <h2 id="ui-designs-heading" className="text-3xl sm:text-4xl font-bold mb-12">
+        UI Designs
       </h2>
 
-      {/* Blog Cards */}
+      {/* UI Design Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
         {designs.map((design, index) => (
           <div
@@ -111,5 +111,5 @@ const BlogSection = React.forwardRef<HTMLDivElement>((_, ref) => {
   );
 });
 
-BlogSection.displayName = "BlogSection";
-export default BlogSection;
+UiSection.displayName = "UiSection";
+export default UiSection;
