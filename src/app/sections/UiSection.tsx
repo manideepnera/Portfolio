@@ -11,12 +11,12 @@ const designs = [
     year: "2025",
     figmaEmbed: "https://embed.figma.com/proto/uAyJgzyaXwdm4eGEwU2IM4/chat-app?page-id=0%3A1&node-id=16-50&p=f&viewport=54%2C144%2C0.75&scaling=scale-down&content-scaling=fixed&starting-point-node-id=16%3A50&embed-host=share"
   },
-  {
-    title: "Dashboard Concept",
-    description: "A startup dashboard UI concept focusing on analytics and clarity.",
-    year: "2025",
-    figmaEmbed: ""
-  }
+  // {
+  //   title: "Dashboard Concept",
+  //   description: "A startup dashboard UI concept focusing on analytics and clarity.",
+  //   year: "2025",
+  //   figmaEmbed: ""
+  // }
 ];
 
 const UiSection = React.forwardRef<HTMLDivElement>((_, ref) => {
