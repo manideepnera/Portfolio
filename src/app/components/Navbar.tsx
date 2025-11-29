@@ -61,14 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({
           className="text-white font-semibold text-lg cursor-pointer"
           onClick={() => scrollToSection(homeRef)}
         >
-          <Image
-    src="/logos/mani-w.png"
-    alt="Mani Logo"
-    width={120}   // adjust size
-    height={40}
-    priority
-  />
-          {/* Manideep Nera */}
+          Manideep Nera
         </div>
 
         {/* Desktop Nav */}
