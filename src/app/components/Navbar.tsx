@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import { Menu, X, Download } from "lucide-react";
 
 type NavbarProps = {
@@ -60,7 +61,14 @@ const Navbar: React.FC<NavbarProps> = ({
           className="text-white font-semibold text-lg cursor-pointer"
           onClick={() => scrollToSection(homeRef)}
         >
-          Manideep Nera
+          <Image
+    src="/logos/mani-w.png"
+    alt="Mani Logo"
+    width={120}   // adjust size
+    height={40}
+    priority
+  />
+          {/* Manideep Nera */}
         </div>
 
         {/* Desktop Nav */}
