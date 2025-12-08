@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { title } from "process";
 
 const projects = [
   {
@@ -14,7 +13,7 @@ const projects = [
     image: "/projects/crop_yield_prediction.png",
     link: "https://manideepnera.github.io/Crop_Yield_Prediction/",
     year: "2024",
-    technologies: ["Python", "Data Visualization"]
+    technologies: ["Python", "Data Visualization"],
   },
   {
     title: "Sun-Safe Seating Planner",
@@ -23,30 +22,65 @@ const projects = [
     image: "/projects/sun_safe.png",
     link: "https://manideepnera.github.io/Sun-Safe-Seating-Planner/",
     year: "2025",
-    technologies: ["JavaScript", "CSS", "HTML"]
-  }
+    technologies: ["JavaScript", "CSS", "HTML"],
+  },
 ];
 
-const ProjectsSection = React.forwardRef<HTMLDivElement>((_, ref) => {
-  const [modalProject, setModalProject] = useState<typeof projects[0] | null>(null);
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 },
+  },
+};
 
-  const openModal = (project: typeof projects[0]) => setModalProject(project);
+const cardVariants = {
+  hidden: { opacity: 0, y: 25 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const ProjectsSection = React.forwardRef<HTMLDivElement>((_, ref) => {
+  const [modalProject, setModalProject] = useState<(typeof projects)[0] | null>(
+    null
+  );
+
+  const openModal = (project: (typeof projects)[0]) => setModalProject(project);
   const closeModal = () => setModalProject(null);
 
   return (
-    <section
+    <motion.section
       ref={ref}
       aria-labelledby="projects-heading"
       className="py-24 px-6 sm:px-12 border-t border-white/10 bg-[#0a0a0a] text-white"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
     >
-      <h2 id="projects-heading" className="text-3xl sm:text-4xl font-bold mb-12">
+      <motion.h2
+        id="projects-heading"
+        className="text-3xl sm:text-4xl font-bold mb-12 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         Projects
-      </h2>
+      </motion.h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
+      {/* Grid */}
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={cardVariants}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             className="group border border-white/10 rounded-xl p-5 bg-white/5 hover:bg-white/10 transition duration-200 cursor-pointer"
             onClick={() => openModal(project)}
           >
@@ -60,11 +94,13 @@ const ProjectsSection = React.forwardRef<HTMLDivElement>((_, ref) => {
               />
             </div>
             <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-            <p className="text-white/60 text-sm mb-4">{project.description.slice(0, 90)}...</p>
+            <p className="text-white/60 text-sm mb-4">
+              {project.description.slice(0, 90)}...
+            </p>
             <p className="text-sm text-blue-400">Click to open</p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* Modal */}
       <AnimatePresence>
@@ -106,7 +142,9 @@ const ProjectsSection = React.forwardRef<HTMLDivElement>((_, ref) => {
 
                   <div className="mt-4 text-center">
                     <h3 className="text-2xl font-bold">{modalProject.title}</h3>
-                    <p className="text-white/70 text-sm mt-1">📅 {modalProject.year}</p>
+                    <p className="text-white/70 text-sm mt-1">
+                      📅 {modalProject.year}
+                    </p>
                   </div>
 
                   <p className="mt-3 text-white/90 text-base leading-relaxed text-center max-w-2xl">
@@ -144,7 +182,7 @@ const ProjectsSection = React.forwardRef<HTMLDivElement>((_, ref) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </motion.section>
   );
 });
 

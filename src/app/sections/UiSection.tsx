@@ -1,63 +1,111 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const designs = [
   {
     title: "Chatter UI Design",
-    description: "A sleek and modern chat application UI design focused on user experience and accessibility.",
+    description:
+      "A sleek and modern chat application UI design focused on user experience and accessibility.",
     year: "2025",
-    figmaEmbed: "https://embed.figma.com/proto/uAyJgzyaXwdm4eGEwU2IM4/chat-app?page-id=0%3A1&node-id=16-50&p=f&viewport=54%2C144%2C0.75&scaling=scale-down&content-scaling=fixed&starting-point-node-id=16%3A50&embed-host=share"
+    coverImage: "/ui/chatter-cover.png", // ✅ new
+    figmaEmbed:
+      "https://embed.figma.com/proto/uAyJgzyaXwdm4eGEwU2IM4/chat-app?page-id=0%3A1&node-id=16-50&p=f&viewport=54%2C144%2C0.75&scaling=scale-down&content-scaling=fixed&starting-point-node-id=16%3A50&embed-host=share",
   },
-  // {
-  //   title: "Dashboard Concept",
-  //   description: "A startup dashboard UI concept focusing on analytics and clarity.",
-  //   year: "2025",
-  //   figmaEmbed: ""
-  // }
 ];
 
-const UiSection = React.forwardRef<HTMLDivElement>((_, ref) => {
-  const [activeDesign, setActiveDesign] = useState<typeof designs[0] | null>(null);
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 },
+  },
+};
 
-  const openModal = (design: typeof designs[0]) => setActiveDesign(design);
+const cardVariants = {
+  hidden: { opacity: 0, y: 25 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const UiSection = React.forwardRef<HTMLDivElement>((_, ref) => {
+  const [activeDesign, setActiveDesign] = useState<(typeof designs)[0] | null>(
+    null
+  );
+
+  const openModal = (design: (typeof designs)[0]) => setActiveDesign(design);
   const closeModal = () => setActiveDesign(null);
 
   return (
-    <section
+    <motion.section
       ref={ref}
-      aria-labelledby="blog-heading"
+      aria-labelledby="ui-designs-heading"
       className="py-24 px-6 sm:px-12 border-t border-white/10 bg-[#0a0a0a] text-white"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
     >
-      <h2 id="ui-designs-heading" className="text-3xl sm:text-4xl font-bold mb-12">
+      {/* Heading */}
+      <motion.h2
+        id="ui-designs-heading"
+        className="text-3xl sm:text-4xl font-bold mb-12 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         UI Designs
-      </h2>
+      </motion.h2>
 
-      {/* UI Design Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
+      {/* Cards Grid */}
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         {designs.map((design, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={cardVariants}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             onClick={() => openModal(design)}
-            className="group border border-white/10 rounded-xl p-5 bg-white/5 hover:bg-white/10 transition duration-200 cursor-pointer"
+            className="group border border-white/10 rounded-xl bg-white/5 hover:bg-white/10 transition duration-200 cursor-pointer overflow-hidden"
           >
-            <h3 className="text-lg font-semibold mb-2">{design.title}</h3>
-
-            <p className="text-white/60 text-sm leading-relaxed mb-4">
-              {design.description.slice(0, 90)}...
-            </p>
-
-            <div className="flex justify-between items-center text-xs text-white/50">
-              <span>{design.year}</span>
-              <span className="text-blue-400">Click to view →</span>
+            {/* ✅ Cover Image */}
+            <div className="relative w-full h-40 overflow-hidden">
+              <Image
+                src={design.coverImage}
+                alt={design.title}
+                fill
+                className="object-fit transition-transform duration-300 group-hover:scale-105"
+              />
             </div>
-          </div>
-        ))}
-      </div>
 
-      {/* Modal */}
+            {/* Content */}
+            <div className="p-5">
+              <h3 className="text-lg font-semibold mb-2">
+                {design.title}
+              </h3>
+
+              <p className="text-white/60 text-sm leading-relaxed mb-4">
+                {design.description.slice(0, 90)}...
+              </p>
+
+              <div className="flex justify-between items-center text-xs text-white/50">
+                <span>{design.year}</span>
+                <span className="text-blue-400">Click to view →</span>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* Modal with Figma Embed */}
       <AnimatePresence>
         {activeDesign && (
           <motion.div
@@ -89,13 +137,12 @@ const UiSection = React.forwardRef<HTMLDivElement>((_, ref) => {
               </div>
 
               {/* Content */}
-              <div className="p-6 h-full">
-                <p className="text-white/70 mb-5 max-w-3xl">
+              <div className="p-6 h-full flex flex-col gap-4">
+                <p className="text-white/70 mb-2 max-w-3xl">
                   {activeDesign.description}
                 </p>
 
-                {/* Figma Embed */}
-                <div className="w-full h-[85%] border border-white/10 rounded-lg overflow-hidden">
+                <div className="w-full flex-1 border border-white/10 rounded-lg overflow-hidden">
                   <iframe
                     src={activeDesign.figmaEmbed}
                     className="w-full h-full"
@@ -107,7 +154,7 @@ const UiSection = React.forwardRef<HTMLDivElement>((_, ref) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </motion.section>
   );
 });
 

@@ -2,59 +2,118 @@ import React from "react";
 import Image from "next/image";
 
 const ContactSection = React.forwardRef<HTMLDivElement>((props, ref) => (
-  <section
+  <footer
     ref={ref}
-    className="py-24 px-6 sm:px-12 border-t border-white/10 bg-[#0a0a0a] text-white"
+    className="py-20 px-5 sm:px-8 lg:px-12 border-t border-white/10 bg-[#0a0a0a] text-white"
   >
-    <h2 className="text-3xl sm:text-4xl font-bold mb-12">Contact</h2>
+    {/* Title */}
+    <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-center">
+      Get in Touch
+    </h2>
 
-    <div className="flex flex-col lg:flex-row gap-12 text-white/80 max-w-6xl text-lg leading-relaxed">
-      {/* Contact Info */}
-      <div className="flex-1 space-y-6">
-        <p>
-          If you’d like to get in touch, feel free to reach out via email or connect with me on social platforms.
-        </p>
-        <div className="space-y-4">
-          <div className="flex items-center gap-4">
-            <Image src="/icons/email.svg" alt="Email" width={24} height={24} />
-            <span className="text-white">manideepnera@gmail.com</span>
-          </div>
-          <div className="flex items-center gap-4">
-            <Image src="/icons/location.svg" alt="Location" width={24} height={24} />
-            <span className="text-white">Hyderabad, Telangana, India</span>
-          </div>
+    {/* Main Content Wrapper */}
+    <div
+      className="
+        max-w-6xl mx-auto
+        flex flex-col items-center
+        gap-10
+        text-white/80 text-base sm:text-lg
+        text-center
+      "
+    >
+      {/* Description */}
+      <p className="max-w-xl sm:max-w-2xl leading-relaxed">
+        I’m always open to new opportunities, collaborations, and meaningful
+        conversations. Feel free to reach out anytime.
+      </p>
+
+      {/* Contact Details */}
+      <div
+        className="
+          flex flex-col sm:flex-row
+          items-center
+          gap-4 sm:gap-8
+          text-white
+        "
+      >
+        <div className="flex items-center gap-3">
+          <Image
+            src="/icons/email.svg"
+            alt="Email"
+            width={22}
+            height={22}
+          />
+          <span className="break-all sm:break-normal">
+            manideepnera@gmail.com
+          </span>
+        </div>
+
+        <span className="hidden sm:block text-white/30">|</span>
+
+        <div className="flex items-center gap-3">
+          <Image
+            src="/icons/location.svg"
+            alt="Location"
+            width={22}
+            height={22}
+          />
+          <span>Hyderabad, Telangana, India</span>
         </div>
       </div>
 
       {/* Social Links */}
-      <div className="flex-1 space-y-6">
-        <h3 className="text-2xl font-semibold text-white mb-2">Connect with me</h3>
-        <div className="flex gap-6 items-center">
-          <a
-            href="https://www.linkedin.com/in/manideepnera/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src="/icons/linkedin.svg" alt="LinkedIn" width={28} height={28} />
-          </a>
-          <a
-            href="https://github.com/manideepnera/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src="/icons/github.svg" alt="GitHub" width={28} height={28} />
-          </a>
-          <a
-            href="https://instagram.com/manideepnera/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src="/icons/instagram.svg" alt="Instagram" width={28} height={28} />
-          </a>
-        </div>
+      <div
+        className="
+          flex items-center justify-center
+          gap-6 sm:gap-8
+          mt-2 sm:mt-4
+        "
+      >
+        <a
+          href="https://www.linkedin.com/in/manideepnera/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="opacity-80 hover:opacity-100 transition"
+        >
+          <Image
+            src="/icons/linkedin.svg"
+            alt="LinkedIn"
+            width={26}
+            height={26}
+          />
+        </a>
+
+        <a
+          href="https://github.com/manideepnera/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="opacity-80 hover:opacity-100 transition"
+        >
+          <Image
+            src="/icons/github.svg"
+            alt="GitHub"
+            width={26}
+            height={26}
+          />
+        </a>
+
+        <a
+          href="https://instagram.com/manideepnera/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="opacity-80 hover:opacity-100 transition"
+        >
+          <Image
+            src="/icons/instagram.svg"
+            alt="Instagram"
+            width={26}
+            height={26}
+          />
+        </a>
       </div>
     </div>
-  </section>
+  </footer>
 ));
 
+ContactSection.displayName = "ContactSection";
 export default ContactSection;
