@@ -7,6 +7,15 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
   {
+    title: "Sun-Safe Seating Planner",
+    description:
+      "An interactive web application that helps users choose sun-safe seating for outdoor events. Features include a clean and minimalistic UI, responsive design, and dynamic time-based seating suggestions.",
+    image: "/projects/sun_safe.png",
+    link: "https://manideepnera.github.io/Sun-Safe-Seating-Planner/",
+    year: "2025",
+    technologies: ["JavaScript", "CSS", "HTML"],
+  },
+  {
     title: "Crop_Yield_Prediction",
     description:
       "A machine learning project that predicts crop yields based on various parameters. Built with Python and TensorFlow. It includes data visualization, preprocessing pipelines, and yield forecasting features.",
@@ -16,13 +25,13 @@ const projects = [
     technologies: ["Python", "Data Visualization"],
   },
   {
-    title: "Sun-Safe Seating Planner",
+    title: "The Happy Paw",
     description:
-      "An interactive web application that helps users choose sun-safe seating for outdoor events. Features include a clean and minimalistic UI, responsive design, and dynamic time-based seating suggestions.",
-    image: "/projects/sun_safe.png",
-    link: "https://manideepnera.github.io/Sun-Safe-Seating-Planner/",
-    year: "2025",
-    technologies: ["JavaScript", "CSS", "HTML"],
+      "A responsive website for a pet care service that offers grooming, boarding, and training. Features include an easy-to-navigate layout, service descriptions, pricing details, and a contact form.",
+    image: "/projects/the_happy_paw.png",
+    link: "https://manideepnera.github.io/TheHappyPaw/",
+    year: "2023",
+    technologies: ["HTML", "CSS"],
   },
 ];
 
