@@ -8,7 +8,7 @@ const skills = [
   { name: "Java", icon: "/skills/java.png", percentage: 5 },
   { name: "HTML & CSS", icon: "/skills/html.png", percentage: 60 },
   { name: "Figma", icon: "/skills/figma.png", percentage: 80 },
-  { name: "Git", icon: "/skills/github.png", percentage: 40 },
+  { name: "Git & GitHub", icon: "/skills/github.png", percentage: 60 },
 ];
 
 const cardVariants = {
