@@ -206,7 +206,7 @@ export default function ChatterPage() {
           </div>
 
           <div className="flex gap-10 text-sm text-white/40 font-medium">
-            <a href="#" className="hover:text-[#8ECAE6] transition">Security</a>
+            <a href="/chatter/privacy-policy" className="hover:text-[#8ECAE6] transition">Privacy Policy</a>
             <a href="#" className="hover:text-[#8ECAE6] transition">APK Download</a>
             <a href="#" className="hover:text-[#8ECAE6] transition flex items-center gap-2">
               <Github size={14} /> Source
