@@ -9,7 +9,7 @@ type NavbarProps = {
   scrollToContact: () => void;
   homeRef: React.RefObject<HTMLDivElement | null>;
   aboutRef: React.RefObject<HTMLDivElement | null>;
-  timelineRef: React.RefObject<HTMLDivElement | null>;
+  // timelineRef: React.RefObject<HTMLDivElement | null>;
   skillsRef: React.RefObject<HTMLDivElement | null>;
   projectsRef: React.RefObject<HTMLDivElement | null>;
   uidesignRef: React.RefObject<HTMLDivElement | null>;
@@ -25,7 +25,7 @@ const Navbar: React.FC<NavbarProps> = ({
   scrollToContact,
   homeRef,
   aboutRef,
-  timelineRef,
+  // timelineRef,
   skillsRef,
   projectsRef,
   uidesignRef,
@@ -52,7 +52,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
   const navItems: [string, React.RefObject<HTMLDivElement | null>][] = [
     ["About", aboutRef],
-    ["Timeline", timelineRef],
+    // ["Timeline", timelineRef],
     ["Skills", skillsRef],
     ["Projects", projectsRef],
     ["UI Designs", uidesignRef],

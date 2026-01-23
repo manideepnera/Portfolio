@@ -17,7 +17,7 @@ import UiSection from './sections/UiSection';
 export default function Home() {
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const homeRef = useRef<HTMLDivElement | null>(null);
-  const timelineRef = useRef<HTMLDivElement | null>(null);
+  // const timelineRef = useRef<HTMLDivElement | null>(null);
   const achievementsRef = useRef<HTMLDivElement | null>(null);
   const blogRef = useRef<HTMLDivElement | null>(null);
   const educationRef = useRef<HTMLDivElement | null>(null);
@@ -40,13 +40,13 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-black text-white">
+    <main className="min-h-screen bg-[#0a0a0a] text-white">
       <Navbar
         scrollToSection={scrollToSection}
         scrollToContact={scrollToContact}
         homeRef={homeRef}
         aboutRef={aboutRef}
-        timelineRef={timelineRef}
+        // timelineRef={timelineRef}
         skillsRef={skillsRef}
         projectsRef={projectsRef}
         uidesignRef={uidesignRef}
@@ -61,7 +61,7 @@ export default function Home() {
       {/* Hero Section */}
       <Hero homeRef={homeRef} contactbtnRef={contactbtnRef} scrollToContact={scrollToContact} />
       <AboutSection ref={aboutRef} />
-      <TimelineSection ref={timelineRef} />
+      {/* <TimelineSection ref={timelineRef} /> */}
       <SkillsSection ref={skillsRef} />
       <ProjectsSection ref={projectsRef} />
       <UiSection ref={uidesignRef} />

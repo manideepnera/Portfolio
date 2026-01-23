@@ -17,14 +17,22 @@ const fontJost = Jost({
 });
 
 const PlayStoreBadge = () => (
-  <div className="flex items-center gap-3 bg-white text-black px-6 py-3 rounded-2xl hover:bg-[#8ECAE6] transition-all cursor-pointer group">
-    <Smartphone size={20} fill="black" />
-    <div className="flex flex-col items-start leading-none">
-      <span className="text-[10px] uppercase font-bold opacity-60">Get it on</span>
-      <span className="text-lg font-bold">Google Play</span>
-    </div>
-  </div>
+  <a
+    href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block hover:scale-[1.03] transition-transform"
+  >
+    <Image
+      src="/badges/google-play.svg"
+      alt="Get it on Google Play"
+      width={180}
+      height={54}
+      priority
+    />
+  </a>
 );
+
 
 export default function ChatterPage() {
   return (
@@ -104,10 +112,10 @@ export default function ChatterPage() {
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <PlayStoreBadge />
-            <button className="px-10 py-4 border border-white/10 rounded-2xl hover:bg-white/5 transition-colors flex items-center gap-2 group">
+            <PlayStoreBadge  />
+            {/* <button className="px-10 py-4 border border-white/10 rounded-2xl hover:bg-white/5 transition-colors flex items-center gap-2 group">
               View Protocol <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+            </button> */}
           </motion.div>
         </div>
       </section>
@@ -120,10 +128,11 @@ export default function ChatterPage() {
           <div className="md:col-span-8 h-[400px] rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-12 relative overflow-hidden group">
              <div className="relative z-10 max-w-sm">
                <Timer className="text-[#FB8500] mb-6" size={40} />
-               <h3 className="font-jost font-medium text-4xl mb-4 italic">24h Destruction</h3>
-               <p className="text-white/50 text-lg leading-relaxed">
-                 Chatter isn't a cloud service. Messages live on your phone for 24 hours, then they're purged from existence. Forever.
-               </p>
+               <h3 className="font-jost font-medium text-4xl mb-4 italic">48h Destruction</h3>
+<p className="text-white/50 text-lg leading-relaxed">
+  Messages stay on your device for 48 hours, then disappear automatically. No backups. No recovery. No traces.
+</p>
+
              </div>
              <div className="absolute right-[-10%] bottom-[-10%] opacity-10 group-hover:opacity-20 transition-opacity">
                 <Timer size={400} />
@@ -159,12 +168,17 @@ export default function ChatterPage() {
           </div>
 
           <div className="md:col-span-4 p-8 rounded-[2.5rem] bg-white/5 border border-white/10 flex items-center gap-6">
-            <div className="p-4 rounded-2xl bg-black"><ShieldCheck className="text-[#8ECAE6]" /></div>
-            <div>
-              <h4 className="font-medium text-lg">Bio-Lock</h4>
-              <p className="text-sm text-white/40">Fingerprint protected.</p>
-            </div>
-          </div>
+  <div className="p-4 rounded-2xl bg-black">
+    <Smartphone className="text-[#8ECAE6]" />
+  </div>
+  <div>
+    <h4 className="font-medium text-lg">Easy UI</h4>
+    <p className="text-sm text-white/40">
+      Clean, distraction-free interface designed for effortless conversations.
+    </p>
+  </div>
+</div>
+
         </div>
       </section>
 
@@ -208,14 +222,11 @@ export default function ChatterPage() {
           <div className="flex gap-10 text-sm text-white/40 font-medium">
             <a href="/chatter/privacy-policy" className="hover:text-[#8ECAE6] transition">Privacy Policy</a>
             <a href="/chatter/account-deletion" className="hover:text-[#8ECAE6] transition">Account Deletion</a>
-            <a href="#" className="hover:text-[#8ECAE6] transition flex items-center gap-2">
-              <Github size={14} /> Source
-            </a>
           </div>
 
           <div className="text-xs text-white/20 text-center md:text-right font-medium">
             Available on Google Play Store.<br />
-            © 2025 Chatter Messaging.
+            © 2026 Chatter Messaging.
           </div>
         </div>
       </footer>

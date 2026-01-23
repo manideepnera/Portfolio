@@ -33,7 +33,7 @@ const skillCategories: SkillCategory[] = [
       {
         name: "Python",
         icon: "/skills/python.png",
-        percentage: 85,
+        percentage: 45,
         level: "Advanced",
         description:
           "Primary language for AI development, data processing, automation, and backend logic.",
@@ -42,65 +42,65 @@ const skillCategories: SkillCategory[] = [
       {
         name: "NumPy",
         icon: "/skills/numpy.png",
-        percentage: 80,
+        percentage: 30,
         level: "Advanced",
         description:
           "Numerical computing, vectorized operations, and linear algebra foundations.",
         tags: ["Arrays", "Math", "Computation"],
       },
-      {
-        name: "Pandas",
-        icon: "/skills/pandas.png",
-        percentage: 78,
-        level: "Advanced",
-        description:
-          "Data cleaning, transformation, analysis, and feature engineering workflows.",
-        tags: ["Data Analysis", "ETL", "DataFrames"],
-      },
-      {
-        name: "Scikit-learn",
-        icon: "/skills/sklearn.png",
-        percentage: 68,
-        level: "Intermediate",
-        description:
-          "Classical machine learning models, preprocessing, pipelines, and evaluation.",
-        tags: ["ML", "Models", "Pipelines"],
-      },
-      {
-        name: "PyTorch / TensorFlow",
-        icon: "/skills/pytorch.png",
-        percentage: 60,
-        level: "Intermediate",
-        description:
-          "Deep learning experimentation, neural networks, and training workflows.",
-        tags: ["Deep Learning", "Neural Nets"],
-      },
+      // {
+      //   name: "Pandas",
+      //   icon: "/skills/pandas.png",
+      //   percentage: 78,
+      //   level: "Advanced",
+      //   description:
+      //     "Data cleaning, transformation, analysis, and feature engineering workflows.",
+      //   tags: ["Data Analysis", "ETL", "DataFrames"],
+      // },
+      // {
+      //   name: "Scikit-learn",
+      //   icon: "/skills/sklearn.png",
+      //   percentage: 68,
+      //   level: "Intermediate",
+      //   description:
+      //     "Classical machine learning models, preprocessing, pipelines, and evaluation.",
+      //   tags: ["ML", "Models", "Pipelines"],
+      // },
+      // {
+      //   name: "PyTorch / TensorFlow",
+      //   icon: "/skills/pytorch.png",
+      //   percentage: 60,
+      //   level: "Intermediate",
+      //   description:
+      //     "Deep learning experimentation, neural networks, and training workflows.",
+      //   tags: ["Deep Learning", "Neural Nets"],
+      // },
     ],
   },
-  {
-    title: "Visualization & Analysis",
-    subtitle: "Understanding data through visual storytelling and exploration.",
-    skills: [
-      {
-        name: "Matplotlib",
-        icon: "/skills/matplotlib.png",
-        percentage: 70,
-        level: "Intermediate",
-        description:
-          "Creating detailed plots for data exploration and model insights.",
-        tags: ["Visualization", "EDA"],
-      },
-      {
-        name: "Seaborn",
-        icon: "/skills/seaborn.png",
-        percentage: 68,
-        level: "Intermediate",
-        description:
-          "Statistical visualizations and high-level data exploration.",
-        tags: ["Statistics", "EDA"],
-      },
-    ],
-  },
+  // {
+  //   title: "Visualization & Analysis",
+  //   subtitle: "Understanding data through visual storytelling and exploration.",
+  //   skills: [
+  //     {
+  //       name: "Matplotlib",
+  //       icon: "/skills/matplotlib.png",
+  //       percentage: 70,
+  //       level: "Intermediate",
+  //       description:
+  //         "Creating detailed plots for data exploration and model insights.",
+  //       tags: ["Visualization", "EDA"],
+  //     },
+  //     {
+  //       name: "Seaborn",
+  //       icon: "/skills/seaborn.png",
+  //       percentage: 68,
+  //       level: "Intermediate",
+  //       description:
+  //         "Statistical visualizations and high-level data exploration.",
+  //       tags: ["Statistics", "EDA"],
+  //     },
+  //   ],
+  // },
   {
     title: "Core Engineering (Java + DSA)",
     subtitle: "Strong problem-solving foundation and backend-ready engineering skills.",
@@ -108,21 +108,21 @@ const skillCategories: SkillCategory[] = [
       {
         name: "Java",
         icon: "/skills/java.png",
-        percentage: 75,
+        percentage: 35,
         level: "Advanced",
         description:
           "Object-oriented programming, clean architecture, and backend-ready logic.",
         tags: ["OOP", "Backend", "Core Java"],
       },
-      {
-        name: "Data Structures & Algorithms",
-        icon: "/skills/dsa.png",
-        percentage: 72,
-        level: "Advanced",
-        description:
-          "Problem solving using arrays, strings, stacks, queues, trees, graphs, and DP.",
-        tags: ["DSA", "Problem Solving", "Algorithms"],
-      },
+      // {
+      //   name: "Data Structures & Algorithms",
+      //   icon: "/skills/dsa.png",
+      //   percentage: 72,
+      //   level: "Advanced",
+      //   description:
+      //     "Problem solving using arrays, strings, stacks, queues, trees, graphs, and DP.",
+      //   tags: ["DSA", "Problem Solving", "Algorithms"],
+      // },
     ],
   },
   {

@@ -3,117 +3,198 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const timelineEvents = [
+type TimelineStatus = "completed" | "running" | "upcoming";
+
+type TimelineEvent = {
+  title: string;
+  description: string;
+  status: TimelineStatus;
+};
+
+const timelineEvents: TimelineEvent[] = [
   {
-    phase: "Foundation Phase",
     title: "Web Fundamentals & Visual Thinking",
     description:
-      "Started with HTML and CSS to understand how the web works, focusing on structure, layouts, responsiveness, and clean visual design.",
+      "Learned how the web works — HTML structure, CSS layouts, responsiveness, and clean visual hierarchy.",
+    status: "completed",
   },
   {
-    phase: "Core Programming Phase",
     title: "Programming Fundamentals",
     description:
-      "Learned core programming concepts using C, Java, and Python, developing a strong base in logic, control flow, and object-oriented thinking.",
+      "Built strong logic using C, Java, and Python. Learned how to think in code.",
+    status: "completed",
   },
   {
-    phase: "Problem-Solving Phase",
-    title: "Data Structures & Algorithms with Java",
-    description:
-      "Strengthened logical reasoning by practicing arrays, strings, stacks, queues, linked lists, recursion, and algorithmic problem solving.",
-  },
-  {
-    phase: "Application Phase",
     title: "Frontend Development & UI Building",
     description:
-      "Applied foundational knowledge by building responsive interfaces and real-world frontend projects with a strong focus on usability and UI clarity.",
+      "Created real interfaces with React and React Native, focusing on usability and flow.",
+    status: "completed",
   },
   {
-    phase: "Intelligence Phase",
+    title: "Data Structures & Algorithms (Java)",
+    description:
+      "Improved problem-solving with arrays, strings, stacks, queues, recursion, and algorithms.",
+    status: "completed",
+  },
+  {
     title: "AI & Machine Learning Exploration",
     description:
-      "Transitioned into AI by working with Python libraries like NumPy and Pandas, learning data handling, preprocessing, and ML fundamentals.",
+      "Currently working with Python, NumPy, Pandas, and ML fundamentals.",
+    status: "running",
   },
   {
-    phase: "Implementation Phase",
-    title: "AI-Focused Project Development",
+    title: "AI Systems & Product Engineering",
     description:
-      "Built intelligent systems and AI-driven projects involving text processing, automation, and experimental machine learning workflows.",
-  },
-  {
-    phase: "Expansion Phase",
-    title: "Full-Stack & App Development",
-    description:
-      "Expanded into React, React Native, Firebase, and backend services, focusing on scalable architecture and real-world product development.",
-  },
-  {
-    phase: "Current Phase",
-    title: "Product Thinking & System Design",
-    description:
-      "Currently focused on AI-powered product building, deeper DSA mastery, system design, and creating production-ready applications.",
+      "Upcoming focus on scalable AI systems and production-ready intelligence.",
+    status: "upcoming",
   },
 ];
 
-const TimelineSection = React.forwardRef<HTMLDivElement>((props, ref) => (
-  <motion.section
+const getDotStyle = (status: TimelineStatus) => {
+  if (status === "completed") return "bg-white";
+  if (status === "running") return "bg-blue-400 animate-pulse";
+  return "bg-white/30";
+};
+
+const getTextStyle = (status: TimelineStatus) => {
+  if (status === "completed") return "text-white";
+  if (status === "running") return "text-white";
+  return "text-white/50";
+};
+
+const TimelineSection = React.forwardRef<HTMLDivElement>((_, ref) => (
+  <section
     ref={ref}
-    className="py-24 px-6 sm:px-12 border-t border-white/10 bg-[#0a0a0a]"
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, amount: 0.3 }}
-    transition={{ duration: 0.6, ease: "easeOut" }}
+    className="py-28 px-6 sm:px-12 border-t border-white/10 bg-[#0a0a0a]"
   >
-    {/* Heading */}
-    <motion.h2
-      className="text-3xl sm:text-4xl font-bold mb-20 text-center"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-    >
+    <h2 className="text-3xl sm:text-4xl font-bold mb-32 text-center">
       Learning Journey
-    </motion.h2>
+    </h2>
 
-    {/* Timeline */}
-    <motion.div
-      className="relative border-l border-white/20 pl-8 max-w-3xl mx-auto"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, amount: 0.4 }}
-      transition={{ staggerChildren: 0.15 }}
-    >
-      {timelineEvents.map((event, index) => (
-        <motion.div
-          key={index}
-          className="mb-16 relative"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-          {/* Timeline Marker */}
-          <div className="absolute -left-[14px] top-3 w-3 h-3 rounded-full bg-white shadow-[0_0_0_6px_rgba(255,255,255,0.06)]" />
+    {/* ===================== DESKTOP (HORIZONTAL) ===================== */}
+    <div className="hidden md:block relative max-w-6xl mx-auto">
+      {/* Line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
-          {/* Phase Label */}
-          <span className="text-xs uppercase tracking-widest text-white/40">
-            {event.phase}
-          </span>
+      <div className="grid grid-cols-6 gap-4 pt-12">
+        {timelineEvents.map((event, index) => {
+          const isRunning = event.status === "running";
+          const isCompleted = event.status === "completed";
 
-          {/* Title */}
-          <h3 className="text-xl font-semibold text-white mt-2 mb-3">
-            {event.title}
-          </h3>
+          return (
+            <motion.div
+              key={index}
+              className="relative group"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              {/* Connecting line to dot */}
+              <div className={`absolute left-1/2 -translate-x-1/2 w-px h-12 -top-12 ${
+                isCompleted ? "bg-white/40" : isRunning ? "bg-blue-400/60" : "bg-white/10"
+              }`} />
 
-          {/* Description */}
-          <p className="text-white/60 leading-relaxed">
-            {event.description}
-          </p>
-        </motion.div>
-      ))}
-    </motion.div>
-  </motion.section>
+              {/* Dot */}
+              <div className="absolute left-1/2 -translate-x-1/2 -top-[3px] z-10">
+                <span
+                  className={`block w-1.5 h-1.5 rounded-full ${getDotStyle(
+                    event.status
+                  )} ${isRunning ? "shadow-lg shadow-blue-400/50" : ""}`}
+                />
+              </div>
+
+              {/* Card - Hidden by default, shown on hover */}
+              <div className="flex flex-col items-center text-center cursor-pointer">
+                {/* Title - Always visible */}
+                <h3
+                  className={`text-sm font-medium mb-3 ${getTextStyle(
+                    event.status
+                  )} group-hover:text-white transition-colors duration-300`}
+                >
+                  {event.title}
+                </h3>
+
+                {/* Description - Shown on hover */}
+                <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 max-h-0 group-hover:max-h-40 overflow-hidden">
+                  <p className="text-xs text-white/60 leading-relaxed">
+                    {event.description}
+                  </p>
+                </div>
+
+                {/* Status badge */}
+                {isRunning && (
+                  <span className="mt-4 text-[10px] tracking-wider uppercase text-blue-400 font-medium">
+                    Current
+                  </span>
+                )}
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+    </div>
+
+    {/* ===================== MOBILE (VERTICAL) ===================== */}
+    <div className="md:hidden relative max-w-xl mx-auto">
+      {/* Line */}
+      <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent" />
+
+      <div className="space-y-12 pl-16">
+        {timelineEvents.map((event, index) => {
+          const isRunning = event.status === "running";
+          const isCompleted = event.status === "completed";
+
+          return (
+            <motion.div
+              key={index}
+              className="relative group"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              {/* Connecting line */}
+              <div className={`absolute -left-[34px] top-2 w-8 h-px ${
+                isCompleted ? "bg-white/40" : isRunning ? "bg-blue-400/60" : "bg-white/10"
+              }`} />
+
+              {/* Dot */}
+              <span
+                className={`absolute -left-[38px] top-[7px] w-1.5 h-1.5 rounded-full ${getDotStyle(
+                  event.status
+                )} ${isRunning ? "shadow-lg shadow-blue-400/50" : ""}`}
+              />
+
+              {/* Content */}
+              <div className="cursor-pointer">
+                <h3
+                  className={`text-base font-medium mb-2 ${getTextStyle(
+                    event.status
+                  )} group-hover:text-white transition-colors duration-300`}
+                >
+                  {event.title}
+                </h3>
+                
+                {/* Description - Shown on tap/hover */}
+                <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 max-h-0 group-hover:max-h-32 overflow-hidden">
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    {event.description}
+                  </p>
+                </div>
+
+                {isRunning && (
+                  <span className="inline-block mt-3 text-[10px] uppercase tracking-wider text-blue-400 font-medium">
+                    Currently Learning
+                  </span>
+                )}
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
 ));
-
 TimelineSection.displayName = "TimelineSection";
-
 export default TimelineSection;
