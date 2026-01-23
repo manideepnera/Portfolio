@@ -7,6 +7,15 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
   {
+    title: "ShopIt E-Commerce",
+    description:
+      "An e-commerce web application, featuring a modern UI, responsive design, and seamless user experience. Built with Next.js and Tailwind CSS.",
+    image: "/projects/shopit.png",
+    link: "https://shopit-manideepnera.vercel.app/",
+    year: "2025",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+  },
+  {
     title: "Sun-Safe Seating Planner",
     description:
       "An interactive web application that helps users choose sun-safe seating for outdoor events. Features include a clean and minimalistic UI, responsive design, and dynamic time-based seating suggestions.",
