@@ -112,7 +112,7 @@ const skillCategories: SkillCategory[] = [
         level: "Advanced",
         description:
           "Object-oriented programming, clean architecture, and backend-ready logic.",
-        tags: ["OOP", "Backend", "Core Java"],
+        tags: ["OOP"],
       },
       // {
       //   name: "Data Structures & Algorithms",
