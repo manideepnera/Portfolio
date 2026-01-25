@@ -34,7 +34,7 @@ export default function HeroSection({ homeRef, contactbtnRef, scrollToContact }:
             transition={{ delay: 0.1, duration: 0.5 }}
             className="text-white/60 text-base sm:text-lg"
           >
-            Hi, I'm Manideep Nera, a passionate developer exploring AI and web technologies.
+            Hi, I’m Manideep Nera, a product-focused developer with a strong interest in AI engineering.
           </motion.p>
 
           <motion.div

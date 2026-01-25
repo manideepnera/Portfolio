@@ -55,10 +55,8 @@ const AboutSection = React.forwardRef<HTMLDivElement>((props, ref) => (
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        As a driven and passionate student, I’m committed to turning my academic
-        achievements and extracurricular involvement into real-world impact. My
-        work reflects a balance between creativity and structure, and I always
-        aim to grow through challenges.
+        I’m a developer committed to learning and improving my skills through hands-on work and experimentation across different technologies, with the aim of becoming an AI engineer.
+
       </motion.div>
     </motion.div>
   </motion.section>
