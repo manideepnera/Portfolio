@@ -45,7 +45,7 @@ const projects = [
   {
     title: "The Happy Paw",
     description:
-      "A responsive website for a pet care service that offers grooming, boarding, and training. Features include an easy-to-navigate layout, service descriptions, pricing details, and a contact form.",
+      "A responsive website for a pet care service that offers grooming, boarding, and training. Features include an easy-to-navigate layout, service descriptions, and a contact form.",
     image: "/projects/the_happy_paw.png",
     link: "https://manideepnera.github.io/TheHappyPaw/",
     year: "2023",
