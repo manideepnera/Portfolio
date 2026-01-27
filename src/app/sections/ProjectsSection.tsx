@@ -7,6 +7,15 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
   {
+    title: "Ai-Powered Meme Generator for Company Advertisements",
+    description:
+      "An AI-powered meme generator web application that creates humorous and engaging memes for company advertisements. Features include a user-friendly interface. Built with Python FastAPI, Next.js and Tailwind CSS.",
+    image: "/projects/meme_generator.png",
+    link: "https://github.com/manideepnera/ai-meme-generator",
+    year: "2026",
+    technologies: ["Python", "FastAPI", "Next.js", "TypeScript", "Tailwind CSS"],
+  },
+  {
     title: "ShopIt E-Commerce",
     description:
       "An e-commerce web application, featuring a modern UI, responsive design, and seamless user experience. Built with Next.js and Tailwind CSS.",
