@@ -16,6 +16,15 @@ const projects = [
     technologies: ["Python", "FastAPI", "Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
+    title: "Chatter - End-to-End Real-Time Chatting App",
+    description:
+      "Chatter is an end-to-end real-time chatting application built using bare React Native and Firebase. It supports secure authentication, real-time message syncing, and scalable user communication. The app is designed with a clean, minimal UI and focuses on performance, reliability, and smooth user experience across devices.",
+    image: "/projects/chatter.png",
+    link: "https://github.com/manideepnera/chatter",
+    year: "2026",
+    technologies: ["React Native", "Firebase", "JavaScript"],
+  },
+  {
     title: "ShopIt E-Commerce",
     description:
       "An e-commerce web application, featuring a modern UI, responsive design, and seamless user experience. Built with Next.js and Tailwind CSS.",
