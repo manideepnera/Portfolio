@@ -8,7 +8,7 @@ export default function USEBlock() {
     {
       icon: Share2,
       title: 'Social Layer',
-      description: 'Content creation and social interaction—posts, videos, comments, reactions, and sharing mechanisms that form the basis of human connection.',
+      description: 'Content creation and social interaction-posts, videos, comments, reactions, and sharing mechanisms that form the basis of human connection.',
     },
     {
       icon: Users,

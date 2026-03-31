@@ -28,5 +28,5 @@ View the live portfolio here: https://manideep-nera.vercel.app/ (Vercel Deployme
 
 ---
 
-If you’re here to explore my work — welcome! If you’re here to collaborate — let’s build something amazing together. 🚀
+If you’re here to explore my work - welcome! If you’re here to collaborate - let’s build something amazing together. 🚀
 

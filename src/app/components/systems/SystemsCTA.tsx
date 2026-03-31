@@ -49,7 +49,7 @@ export default function SystemsCTA() {
             variants={itemVariants}
             className="text-lg text-white/60 mb-12 leading-relaxed"
           >
-            I'm looking for builders, thinkers, and collaborators who understand the vision. If you're interested in exploring these ideas or want to discuss what's possible—let's connect.
+            I'm looking for builders, thinkers, and collaborators who understand the vision. If you're interested in exploring these ideas or want to discuss what's possible-let's connect.
           </motion.p>
 
           {/* CTA Buttons */}

@@ -202,7 +202,7 @@ export default function ProjectHierarchy() {
               </div>
 
               <p className="text-white/70 text-sm leading-relaxed mb-4">
-                A functional implementation demonstrating core USE principles in practice. Corex serves as a proof-of-concept—showing that the theory works and validating Project CtoC's architectural vision.
+                A functional implementation demonstrating core USE principles in practice. Corex serves as a proof-of-concept-showing that the theory works and validating Project CtoC's architectural vision.
               </p>
 
               <p className="text-white/70 text-sm leading-relaxed mb-6">

@@ -55,7 +55,7 @@ const ContactSection = React.forwardRef<HTMLDivElement>((props, ref) => (
         </div>
       </div>
 
-      {/* RIGHT SIDE — ✅ Bottom Aligned on Big Screens */}
+      {/* RIGHT SIDE - ✅ Bottom Aligned on Big Screens */}
       <div className="flex items-center lg:items-end lg:self-end">
         <div className="flex gap-5 lg:gap-10 items-center">
           <a

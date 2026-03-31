@@ -15,7 +15,7 @@ const timelineEvents: TimelineEvent[] = [
   {
     title: "Web Fundamentals & Visual Thinking",
     description:
-      "Learned how the web works — HTML structure, CSS layouts, responsiveness, and clean visual hierarchy.",
+      "Learned how the web works - HTML structure, CSS layouts, responsiveness, and clean visual hierarchy.",
     status: "completed",
   },
   {

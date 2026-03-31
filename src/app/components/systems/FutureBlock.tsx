@@ -8,7 +8,7 @@ export default function FutureBlock() {
     {
       icon: Sparkles,
       title: 'Economic Evolution',
-      description: 'USE enables new digital economies—creator platforms, entrepreneurship, and virtual marketplaces within unified ecosystems',
+      description: 'USE enables new digital economies-creator platforms, entrepreneurship, and virtual marketplaces within unified ecosystems',
     },
     {
       icon: TrendingUp,
@@ -79,7 +79,7 @@ export default function FutureBlock() {
           className="mt-16 p-8 rounded-xl bg-gradient-to-r from-[#8ECAE6]/5 to-[#FFB703]/5 border border-[#8ECAE6]/20"
         >
           <p className="text-white/80 text-lg leading-relaxed mb-4">
-            <span className="text-white font-semibold">The common thread:</span> Digital platforms are evolving from isolated tools into integrated ecosystems that mirror society itself—with social, communicational, communal, professional, and intelligent dimensions coexisting.
+            <span className="text-white font-semibold">The common thread:</span> Digital platforms are evolving from isolated tools into integrated ecosystems that mirror society itself-with social, communicational, communal, professional, and intelligent dimensions coexisting.
           </p>
           <p className="text-white/60 text-sm">
             The goal is to build tools that respect human agency while enabling new possibilities. Systems that transcend the limitations of traditional networks and evolve into true digital ecosystems.

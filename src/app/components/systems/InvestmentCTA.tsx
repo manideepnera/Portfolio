@@ -53,7 +53,7 @@ export default function InvestmentCTA() {
             variants={itemVariants}
             className="text-lg text-white/70 mb-6 leading-relaxed max-w-2xl mx-auto"
           >
-            Project CtoC is an ambitious initiative to build the Unified Social Ecosystem—a truly integrated digital environment where social, communication, community, professional, and intelligent systems coexist. We're looking for visionary partners, investors, and builders to make this happen.
+            Project CtoC is an ambitious initiative to build the Unified Social Ecosystem-a truly integrated digital environment where social, communication, community, professional, and intelligent systems coexist. We're looking for visionary partners, investors, and builders to make this happen.
           </motion.p>
 
           <motion.p
@@ -83,7 +83,7 @@ export default function InvestmentCTA() {
               icon: Users,
               title: 'Research-Backed',
               description:
-                'Built on the Unified Social Ecosystem framework—published research into how digital platforms are fundamentally transforming.',
+                'Built on the Unified Social Ecosystem framework-published research into how digital platforms are fundamentally transforming.',
             },
             {
               icon: Zap,
@@ -167,7 +167,7 @@ export default function InvestmentCTA() {
           variants={itemVariants}
           className="text-center text-white/40 text-sm mt-12 max-w-2xl mx-auto"
         >
-          The future of digital interaction is interconnected. Project CtoC isn't just another platform—it's a rethinking of what digital ecosystems can be. Join us in building it.
+          The future of digital interaction is interconnected. Project CtoC isn't just another platform-it's a rethinking of what digital ecosystems can be. Join us in building it.
         </motion.p>
       </div>
     </motion.section>
