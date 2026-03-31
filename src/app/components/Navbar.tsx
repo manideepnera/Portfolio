@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 type NavbarProps = {
   scrollToSection: (ref: React.RefObject<HTMLDivElement | null>) => void;
@@ -89,6 +90,9 @@ const Navbar: React.FC<NavbarProps> = ({
               {label}
             </li>
           ))}
+          <li className="hover:text-white cursor-pointer">
+            <Link href="/vision-in-motion">Vision in Motion</Link>
+          </li>
         </ul>
 
         {/* Right Side Buttons */}
@@ -150,6 +154,11 @@ const Navbar: React.FC<NavbarProps> = ({
                 {label}
               </div>
             ))}
+
+            {/* Vision in Motion Link */}
+            <Link href="/vision-in-motion" className="cursor-pointer text-sm hover:text-gray-300">
+              Vision in Motion
+            </Link>
 
             {/* Resume Button */}
             <a
