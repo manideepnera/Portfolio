@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 type NavbarProps = {
   scrollToSection: (ref: React.RefObject<HTMLDivElement | null>) => void;
@@ -73,10 +74,17 @@ const Navbar: React.FC<NavbarProps> = ({
       <nav className="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-white/10 px-6 py-4 flex justify-between items-center h-16">
         {/* Logo */}
         <div
-          className="text-white font-semibold text-lg cursor-pointer"
+          className="cursor-pointer"
           onClick={() => scrollToSection(homeRef)}
         >
-          Manideep Nera
+          <Image
+            src="/logo.png"
+            alt="Manideep Nera Logo"
+            width={160}
+            height={100}
+            className="opacity-100"
+            priority
+          />
         </div>
 
         {/* Desktop Nav */}
@@ -90,9 +98,9 @@ const Navbar: React.FC<NavbarProps> = ({
               {label}
             </li>
           ))}
-          <li className="hover:text-white cursor-pointer">
+          {/* <li className="hover:text-white cursor-pointer">
             <Link href="/vision-in-motion">Vision in Motion</Link>
-          </li>
+          </li> */}
         </ul>
 
         {/* Right Side Buttons */}
@@ -156,9 +164,9 @@ const Navbar: React.FC<NavbarProps> = ({
             ))}
 
             {/* Vision in Motion Link */}
-            <Link href="/vision-in-motion" className="cursor-pointer text-sm hover:text-gray-300">
+            {/* <Link href="/vision-in-motion" className="cursor-pointer text-sm hover:text-gray-300">
               Vision in Motion
-            </Link>
+            </Link> */}
 
             {/* Resume Button */}
             <a
