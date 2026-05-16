@@ -46,6 +46,14 @@ const skillCategories: SkillCategory[] = [
         description: "Numerical operations, arrays, and mathematical computing.",
         tags: ["Arrays", "Math"],
       },
+      {
+        name: "FastAPI",
+        icon: "/skills/fastapi.png",
+        percentage: 70,
+        level: "Advanced",
+        description: "Building scalable REST APIs, async backends, and production services with async/await patterns.",
+        tags: ["APIs", "Backend", "Production"],
+      },
             // {
       //   name: "Pandas",
       //   icon: "/skills/pandas.png",
@@ -97,29 +105,29 @@ const skillCategories: SkillCategory[] = [
       },
     ],
   },
-  {
-    title: "Core Engineering",
-    subtitle: "Strong problem-solving foundation and backend-ready skills.",
-    skills: [
-      {
-        name: "Java",
-        icon: "/skills/java.png",
-        percentage: 35,
-        level: "Advanced",
-        description: "Object-oriented programming and clean backend logic.",
-        tags: ["OOP"],
-      },
-            // {
-      //   name: "Data Structures & Algorithms",
-      //   icon: "/skills/dsa.png",
-      //   percentage: 72,
-      //   level: "Advanced",
-      //   description:
-      //     "Problem solving using arrays, strings, stacks, queues, trees, graphs, and DP.",
-      //   tags: ["DSA", "Problem Solving", "Algorithms"],
-      // },
-    ],
-  },
+  // {
+  //   title: "Core Engineering",
+  //   subtitle: "Strong problem-solving foundation and backend-ready skills.",
+  //   skills: [
+  //     // {
+  //     //   name: "Java",
+  //     //   icon: "/skills/java.png",
+  //     //   percentage: 35,
+  //     //   level: "Advanced",
+  //     //   description: "Object-oriented programming and clean backend logic.",
+  //     //   tags: ["OOP"],
+  //     // },
+  //     //       {
+  //     //   name: "Data Structures & Algorithms",
+  //     //   icon: "/skills/dsa.png",
+  //     //   percentage: 72,
+  //     //   level: "Advanced",
+  //     //   description:
+  //     //     "Problem solving using arrays, strings, stacks, queues, trees, graphs, and DP.",
+  //     //   tags: ["DSA", "Problem Solving", "Algorithms"],
+  //     // },
+  //   ],
+  // },
   {
     title: "Product & Developer Tools",
     subtitle: "Tools used to design, build, and collaborate effectively.",
@@ -141,6 +149,29 @@ const skillCategories: SkillCategory[] = [
         tags: ["Git"],
       },
     ],
+  },
+];
+
+/* ---------- Worked With Skills ---------- */
+
+const workedWithSkills = [
+  {
+    name: "Docker",
+    icon: "/skills/docker.png",
+    description: "Containerization and Docker Compose for local development and deployments.",
+    tags: ["Deployment", "Containers"],
+  },
+  {
+    name: "Firebase",
+    icon: "/skills/firebase.png",
+    description: "Cloud Messaging (FCM), authentication, and real-time databases in projects.",
+    tags: ["Backend", "BaaS"],
+  },
+  {
+    name: "AWS",
+    icon: "/skills/aws.png",
+    description: "Cloud infrastructure exploration, EC2, and S3 for project requirements.",
+    tags: ["Cloud", "Infrastructure"],
   },
 ];
 
@@ -272,6 +303,74 @@ const SkillsSection = forwardRef<HTMLElement>((_, ref) => {
             </motion.div>
           </div>
         ))}
+      </div>
+
+      {/* Worked With Section */}
+      <div className="max-w-6xl mx-auto mt-28 pt-20 border-t border-white/10">
+        <div className="mb-12">
+          <h3 className="text-2xl font-medium text-white mb-3">
+            Worked With
+          </h3>
+          <p className="text-white/50 max-w-xl text-sm">
+            Technologies used in project requirements. Familiar but explored in-depth based on specific use cases.
+          </p>
+        </div>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ staggerChildren: 0.12 }}
+        >
+          {workedWithSkills.map((skill) => (
+            <motion.div
+              key={skill.name}
+              variants={cardVariants}
+              className="
+                group relative
+                rounded-2xl p-6
+                bg-white/[0.02]
+                border border-white/5
+                hover:bg-white/[0.04]
+                transition
+              "
+            >
+              {/* Header */}
+              <div className="flex items-center gap-4 mb-5">
+                <div className="relative w-10 h-10 opacity-70">
+                  <Image
+                    src={skill.icon}
+                    alt={skill.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div>
+                  <p className="text-white font-medium">{skill.name}</p>
+                  <p className="text-xs text-white/30">Familiar</p>
+                </div>
+              </div>
+
+              {/* Description */}
+              <p className="text-sm text-white/55 leading-relaxed mb-4">
+                {skill.description}
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2">
+                {skill.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[10px] px-2 py-1 rounded-full border border-white/5 text-white/40"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
