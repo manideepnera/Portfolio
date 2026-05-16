@@ -523,6 +523,120 @@ export default function CorexPage() {
         </div>
       </section>
 
+      {/* ── TECH STACK ──────────────────────────────────────────── */}
+      <section className="py-28 px-6 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-4" style={{ color: C.accent }}>Portfolio Highlight</p>
+          <h2 style={{
+            fontFamily: 'var(--font-satoshi)',
+            fontSize: 'clamp(32px, 4vw, 50px)',
+            fontWeight: 700,
+            color: C.text,
+            lineHeight: 1.1
+          }}>Complete Full-Stack Architecture</h2>
+          <p className="mt-4 text-base" style={{ color: C.textMuted }}>Production-ready platform deployed with 50+ active users</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {/* Mobile */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+            className="rounded-3xl p-8 border"
+            style={{ background: C.card, borderColor: C.border }}
+          >
+            <h3 className="text-lg font-bold mb-4" style={{ color: C.primary }}>📱 Mobile Application</h3>
+            <ul className="space-y-2 text-sm" style={{ color: C.textMuted }}>
+              <li>✓ Bare React Native</li>
+              <li>✓ Android production deployment on Google Play Store</li>
+            </ul>
+          </motion.div>
+
+          {/* Backend */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
+            className="rounded-3xl p-8 border"
+            style={{ background: C.card, borderColor: C.border }}
+          >
+            <h3 className="text-lg font-bold mb-4" style={{ color: C.primary }}>⚙️ Backend</h3>
+            <ul className="space-y-2 text-sm" style={{ color: C.textMuted }}>
+              <li>✓ FastAPI architecture</li>
+              <li>✓ PostgreSQL database system</li>
+              <li>✓ Railway hosting</li>
+              <li>✓ Docker-based local development setup</li>
+            </ul>
+          </motion.div>
+
+          {/* Storage & Services */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }}
+            className="rounded-3xl p-8 border"
+            style={{ background: C.card, borderColor: C.border }}
+          >
+            <h3 className="text-lg font-bold mb-4" style={{ color: C.primary }}>☁️ Storage & Services</h3>
+            <ul className="space-y-2 text-sm" style={{ color: C.textMuted }}>
+              <li>✓ Cloudflare Storage for media handling</li>
+              <li>✓ Firebase Cloud Messaging (FCM) for push notifications</li>
+            </ul>
+          </motion.div>
+
+          {/* Platform Structure */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
+            className="rounded-3xl p-8 border"
+            style={{ background: C.card, borderColor: C.border }}
+          >
+            <h3 className="text-lg font-bold mb-4" style={{ color: C.primary }}>🏗️ Platform Structure</h3>
+            <ul className="space-y-2 text-sm" style={{ color: C.textMuted }}>
+              <li>✓ 1 Mobile Application</li>
+              <li>✓ 2 Web Platforms</li>
+              <li>✓ Corex Public Website</li>
+              <li>✓ Dashboard for moderation</li>
+            </ul>
+          </motion.div>
+        </div>
+
+        {/* Development Highlights */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.25 }}
+          className="rounded-3xl p-10 border"
+          style={{ background: C.brandTint, borderColor: C.primary + '40' }}
+        >
+          <h3 className="text-xl font-bold mb-6" style={{ color: C.primary }}>🚀 Development Highlights</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              'Designed and developed the complete full-stack architecture',
+              'Built scalable backend APIs using FastAPI',
+              'Implemented production-ready PostgreSQL systems',
+              'Integrated media storage and notification systems',
+              'Developed dashboard infrastructure for moderation and management',
+              'Managed deployment workflows and cloud hosting',
+            ].map((highlight, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
+                transition={{ delay: 0.25 + idx * 0.05 }}
+                className="flex items-start gap-3"
+              >
+                <span style={{ color: C.accent, marginTop: '2px' }}>▸</span>
+                <span style={{ color: C.textMuted, fontSize: '14px' }}>{highlight}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Production Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.35 }}
+          className="mt-8 text-center p-8 rounded-2xl"
+          style={{ background: C.surface, border: `1px solid ${C.border}` }}
+        >
+          <div className="text-4xl font-bold mb-2" style={{ background: `linear-gradient(135deg, ${C.gradStart}, ${C.accent})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            50+ Active Users
+          </div>
+          <p style={{ color: C.textMuted }}>Successfully running in production</p>
+        </motion.div>
+      </section>
+
       {/* ── PHILOSOPHY ──────────────────────────────────────────── */}
       <section className="py-24 px-6" style={{ background: C.surface, borderTop: `1px solid ${C.border}`, borderBottom: `1px solid ${C.border}` }}>
         <div className="max-w-3xl mx-auto text-center">
