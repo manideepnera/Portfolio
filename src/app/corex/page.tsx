@@ -637,9 +637,8 @@ export default function CorexPage() {
           </div>
 
           <div className="flex gap-8 text-sm font-medium" style={{ color: C.textMuted }}>
-            <a href="#" className="transition-colors hover:text-[#D4A373]">Privacy Policy</a>
-            <a href="#" className="transition-colors hover:text-[#D4A373]">Terms of Service</a>
-            <a href="#" className="transition-colors hover:text-[#D4A373]">Contact</a>
+            <a href="https://corexplatform.vercel.app/privacy-policy" className="transition-colors hover:text-[#D4A373]">Privacy Policy</a>
+            <a href="https://corexplatform.vercel.app/terms" className="transition-colors hover:text-[#D4A373]">Terms of Service</a>
           </div>
 
           <div className="text-xs text-right" style={{ color: C.textHint }}>

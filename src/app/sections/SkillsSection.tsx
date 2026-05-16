@@ -252,7 +252,7 @@ const SkillsSection = forwardRef<HTMLElement>((_, ref) => {
                     </div>
 
                     {/* Progress */}
-                    <div>
+                    {/* <div>
                       <div className="flex justify-between text-xs text-white/40 mb-1">
                         <span>Proficiency</span>
                         <span>{skill.percentage}%</span>
@@ -265,7 +265,7 @@ const SkillsSection = forwardRef<HTMLElement>((_, ref) => {
                           transition={{ duration: 0.7, ease: "easeOut" }}
                         />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </motion.div>
               ))}
