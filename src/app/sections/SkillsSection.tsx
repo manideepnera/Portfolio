@@ -15,6 +15,7 @@ type Skill = {
   level: SkillLevel;
   description: string;
   tags: string[];
+  isTextIcon?: boolean;
 };
 
 type SkillCategory = {
@@ -53,6 +54,15 @@ const skillCategories: SkillCategory[] = [
         level: "Advanced",
         description: "Building scalable REST APIs, async backends, and production services with async/await patterns.",
         tags: ["APIs", "Backend", "Production"],
+      },
+      {
+        name: "RAG",
+        icon: "RAG",
+        percentage: 60,
+        level: "Intermediate",
+        description: "Retrieval-Augmented Generation for combining semantic search with LLM reasoning and knowledge grounding.",
+        tags: ["AI", "LLM", "NLP"],
+        isTextIcon: true,
       },
             // {
       //   name: "Pandas",
@@ -249,13 +259,17 @@ const SkillsSection = forwardRef<HTMLElement>((_, ref) => {
                 >
                   {/* Header */}
                   <div className="flex items-center gap-4 mb-5">
-                    <div className="relative w-10 h-10 opacity-90">
-                      <Image
-                        src={skill.icon}
-                        alt={skill.name}
-                        fill
-                        className="object-contain"
-                      />
+                    <div className="relative w-10 h-10 opacity-90 flex items-center justify-center">
+                      {skill.isTextIcon ? (
+                        <span className="text-white font-bold text-sm">{skill.icon}</span>
+                      ) : (
+                        <Image
+                          src={skill.icon}
+                          alt={skill.name}
+                          fill
+                          className="object-contain"
+                        />
+                      )}
                     </div>
                     <div>
                       <p className="text-white font-medium">{skill.name}</p>
