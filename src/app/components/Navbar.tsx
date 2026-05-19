@@ -107,7 +107,7 @@ const Navbar: React.FC<NavbarProps> = ({
         <div className="hidden lg:flex items-center gap-3">
           {/* Resume Download */}
           <a
-            href="/resume.pdf"
+            href="/ManideepNera_Resume.pdf"
             download
             className="flex items-center gap-1 text-sm border border-white/20 rounded-md px-4 py-1.5 text-white hover:bg-white hover:text-black transition"
           >
@@ -170,7 +170,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
             {/* Resume Button */}
             <a
-              href="/resume.pdf"
+              href="/ManideepNera_Resume.pdf"
               download
               className="flex items-center justify-center gap-1 text-sm border border-white/20 rounded-md px-4 py-2 hover:bg-white hover:text-black transition"
             >
