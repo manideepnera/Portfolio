@@ -70,19 +70,19 @@ export default function HeroSection({ homeRef, contactbtnRef, scrollToContact }:
         </motion.div>
       </div>
       {/* Featured Projects Section */}
-      <div className="z-10 w-full max-w-4xl mx-auto mt-16 md:mt-24">
+      <div className="z-10 w-full mx-auto mt-16 md:mt-24 px-6">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="text-center mb-8"
+          className="text-center mb-12"
         >
           <p className="text-white/50 text-sm uppercase tracking-widest font-medium">Featured Projects</p>
           <h3 className="text-2xl font-bold text-white mt-2">Key Works</h3>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Corex Card */}
           <motion.div
             initial={{ y: 30, opacity: 0 }}
@@ -91,31 +91,62 @@ export default function HeroSection({ homeRef, contactbtnRef, scrollToContact }:
             transition={{ delay: 0.4 }}
           >
             <Link href="/corex" className="group h-full">
-              <div className="h-full flex flex-col p-6 rounded-2xl bg-gradient-to-br from-[#FFB703]/10 to-transparent border border-[#FFB703]/20 hover:border-[#FFB703]/50 hover:bg-gradient-to-br hover:from-[#FFB703]/15 hover:to-[#FFB703]/5 transition-all duration-300 backdrop-blur-sm">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="relative w-12 h-12 flex items-center justify-center">
+              <div className="h-full flex flex-col p-8 rounded-2xl bg-gradient-to-br from-[#FFB703]/10 to-transparent border border-[#FFB703]/20 hover:border-[#FFB703]/50 hover:bg-gradient-to-br hover:from-[#FFB703]/15 hover:to-[#FFB703]/5 transition-all duration-300 backdrop-blur-sm">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="relative w-14 h-14 flex items-center justify-center">
                     <Image 
                       src="/logos/corex_logo.png" 
                       alt="Corex Icon" 
-                      width={48} 
-                      height={48} 
+                      width={56} 
+                      height={56} 
                       className="group-hover:scale-110 transition-transform"
                     />
                   </div>
-                  <ArrowRight size={18} className="text-[#FFB703]/50 group-hover:text-[#FFB703] group-hover:translate-x-1 transition-all" />
+                  <ArrowRight size={20} className="text-[#FFB703]/50 group-hover:text-[#FFB703] group-hover:translate-x-1 transition-all" />
 
                 </div>
 
                 <div className="flex-1">
-                  <h4 className="text-lg font-bold text-white mb-1">Corex</h4>
-                  <p className="text-sm text-white/60 mb-3">Core Social Network</p>
-                  <p className="text-xs text-white/50 leading-relaxed">
+                  <h4 className="text-2xl font-bold text-white mb-2">Corex</h4>
+                  <p className="text-base text-white/60 mb-4">Core Social Network</p>
+                  <p className="text-sm text-white/50 leading-relaxed">
                     A functional proof-of-concept demonstrating core principles of digital ecosystem evolution.
                   </p>
                 </div>
 
-                <div className="mt-4 pt-4 border-t border-[#FFB703]/10 flex items-center gap-2">
-                  <span className="text-xs text-[#FFB703]/70 font-medium">Explore Project</span>
+                <div className="mt-6 pt-6 border-t border-[#FFB703]/10 flex items-center gap-2">
+                  <span className="text-sm text-[#FFB703]/70 font-medium">Explore Project</span>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* June AI Card */}
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.45 }}
+          >
+            <Link href="/june-ai" className="group h-full">
+              <div className="h-full flex flex-col p-8 rounded-2xl bg-gradient-to-br from-[#3B82F6]/10 to-transparent border border-[#3B82F6]/20 hover:border-[#3B82F6]/50 hover:bg-gradient-to-br hover:from-[#3B82F6]/15 hover:to-[#3B82F6]/5 transition-all duration-300 backdrop-blur-sm">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="relative w-14 h-14 flex items-center justify-center rounded-lg bg-[#3B82F6]/20">
+                    <span className="text-2xl font-bold text-[#3B82F6]">♦</span>
+                  </div>
+                  <ArrowRight size={20} className="text-[#3B82F6]/50 group-hover:text-[#3B82F6] group-hover:translate-x-1 transition-all" />
+                </div>
+
+                <div className="flex-1">
+                  <h4 className="text-2xl font-bold text-white mb-2">June AI</h4>
+                  <p className="text-base text-white/60 mb-4">Modular AI Operating System</p>
+                  <p className="text-sm text-white/50 leading-relaxed">
+                    An evolving modular AI ecosystem designed as a personal cognitive operating system.
+                  </p>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-[#3B82F6]/10 flex items-center gap-2">
+                  <span className="text-sm text-[#3B82F6]/70 font-medium">Explore Project</span>
                 </div>
               </div>
             </Link>
@@ -129,31 +160,31 @@ export default function HeroSection({ homeRef, contactbtnRef, scrollToContact }:
             transition={{ delay: 0.5 }}
           >
             <Link href="/chatter" className="group h-full">
-              <div className="h-full flex flex-col p-6 rounded-2xl bg-gradient-to-br from-[#8ECAE6]/10 to-transparent border border-[#8ECAE6]/20 hover:border-[#8ECAE6]/50 hover:bg-gradient-to-br hover:from-[#8ECAE6]/15 hover:to-[#8ECAE6]/5 transition-all duration-300 backdrop-blur-sm">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="relative w-12 h-12 flex items-center justify-center">
+              <div className="h-full flex flex-col p-8 rounded-2xl bg-gradient-to-br from-[#8ECAE6]/10 to-transparent border border-[#8ECAE6]/20 hover:border-[#8ECAE6]/50 hover:bg-gradient-to-br hover:from-[#8ECAE6]/15 hover:to-[#8ECAE6]/5 transition-all duration-300 backdrop-blur-sm">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="relative w-14 h-14 flex items-center justify-center">
                     <Image 
                       src="/logos/chatter_logo.png" 
                       alt="Chatter Icon" 
-                      width={48} 
-                      height={48} 
+                      width={56} 
+                      height={56} 
                       className="group-hover:scale-110 transition-transform"
                     />
                   </div>
-                  <ArrowRight size={18} className="text-[#8ECAE6]/50 group-hover:text-[#8ECAE6] group-hover:translate-x-1 transition-all" />
+                  <ArrowRight size={20} className="text-[#8ECAE6]/50 group-hover:text-[#8ECAE6] group-hover:translate-x-1 transition-all" />
 
                 </div>
 
                 <div className="flex-1">
-                  <h4 className="text-lg font-bold text-white mb-1">Chatter</h4>
-                  <p className="text-sm text-white/60 mb-3">Ephemeral Messaging</p>
-                  <p className="text-xs text-white/50 leading-relaxed">
+                  <h4 className="text-2xl font-bold text-white mb-2">Chatter</h4>
+                  <p className="text-base text-white/60 mb-4">Ephemeral Messaging</p>
+                  <p className="text-sm text-white/50 leading-relaxed">
                     Privacy-first messaging platform with ephemeral conversations and secure communications.
                   </p>
                 </div>
 
-<div className="mt-4 pt-4 border-t border-[#8ECAE6]/10 flex items-center gap-2">
-                  <span className="text-xs text-[#8ECAE6]/70 font-medium">Explore Project</span>
+<div className="mt-6 pt-6 border-t border-[#8ECAE6]/10 flex items-center gap-2">
+                  <span className="text-sm text-[#8ECAE6]/70 font-medium">Explore Project</span>
                 </div>
               </div>
             </Link>
